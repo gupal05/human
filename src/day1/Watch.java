@@ -25,7 +25,7 @@ public class Watch extends JFrame{
 
 	      public Clockable() {
 	         setText(makeTime());
-	         setFont(new Font("°íµñÃ¼",Font.ITALIC,100));
+	         setFont(new Font("ï¿½ï¿½ï¿½Ã¼",Font.ITALIC,100));
 	         setForeground(Color.WHITE);
 	         setBackground(Color.BLUE);
 	         setHorizontalAlignment(JLabel.CENTER);
@@ -34,19 +34,25 @@ public class Watch extends JFrame{
 	         tr.start();
 	      }      
 	      public String makeTime() {
-	         Calendar now = Calendar.getInstance();
-	         int time = now.get(Calendar.HOUR_OF_DAY);
-	         int min  = now.get(Calendar.MINUTE);
-	         int second = now.get(Calendar.SECOND);
-	         
-	         String timeText = Integer.toString(time);
-	         timeText = timeText.concat(":");
-	         timeText = timeText.concat(Integer.toString(min));
-	         timeText = timeText.concat(":");
-	         timeText = timeText.concat(Integer.toString(second));
-	         
-	         return timeText;
-	      }
+	          Calendar now = Calendar.getInstance();
+	          int year = now.get(Calendar.YEAR);
+	          int month = now.get(Calendar.MONTH)+1;
+	          int time = now.get(Calendar.HOUR_OF_DAY);
+	          int min  = now.get(Calendar.MINUTE);
+	          int second = now.get(Calendar.SECOND);
+	          
+	          String timeText = Integer.toString(year);
+	          timeText = timeText.concat("ë…„ ");
+	          timeText = timeText.concat(Integer.toString(month));
+	          timeText = timeText.concat("ì›” ");
+	          timeText = timeText.concat(Integer.toString(time));
+	          timeText = timeText.concat(":");
+	          timeText = timeText.concat(Integer.toString(min));
+	          timeText = timeText.concat(":");
+	          timeText = timeText.concat(Integer.toString(second));
+	          
+	          return timeText;
+	       }
 	      
 	      @Override
 	      public void run() {
