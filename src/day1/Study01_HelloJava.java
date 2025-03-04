@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Study01_HelloJava {
 
 	public static void main(String[] args) {
-		System.out.println("ÇÏ³ª");
-		System.out.println("µÎ¿ï");
-		System.out.println("¼¼¿§");
+		System.out.println("í•˜ë‚˜");
+		System.out.println("ë‘ìš¸");
+		System.out.println("ì„¸ì—£");
 		
 		System.out.println();
-		System.out.print("ÇÏ³ª");
-		System.out.print("µÎ¿ï");
-		System.out.print("¼¼¿§");
+		System.out.print("í•˜ë‚˜");
+		System.out.print("ë‘ìš¸");
+		System.out.print("ì„¸ì—£");
 		
 		Scanner sc = new Scanner(System.in);
 		
